@@ -1,0 +1,12 @@
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\bin\Debug\net5.0\CommandHandling.deps.json
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\bin\Debug\net5.0\CommandHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\bin\Debug\net5.0\ref\CommandHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\bin\Debug\net5.0\CommandHandling.pdb
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.csproj.AssemblyReference.cache
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.AssemblyInfoInputs.cache
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.AssemblyInfo.cs
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.csproj.CoreCompileInputs.cache
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\ref\CommandHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\CommandHandling\obj\Debug\net5.0\CommandHandling.pdb

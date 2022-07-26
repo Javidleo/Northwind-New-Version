@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "qJxd1K1eIG3554OVYVx6KdURqiVLyzsbxZn/wuz6Bu+VF3RkYbSUplCPd4k/vLQhQ5AGGWFpGv61xxzq7Dv65Q==",
+  "success": true,
+  "projectFilePath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\CommandHandling\\CommandHandling.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Javid\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

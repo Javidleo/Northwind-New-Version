@@ -1,0 +1,11 @@
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\bin\Debug\net5.0\QueryHandling.deps.json
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\bin\Debug\net5.0\QueryHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\bin\Debug\net5.0\ref\QueryHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\bin\Debug\net5.0\QueryHandling.pdb
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\QueryHandling.GeneratedMSBuildEditorConfig.editorconfig
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\QueryHandling.AssemblyInfoInputs.cache
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\QueryHandling.AssemblyInfo.cs
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\QueryHandling.csproj.CoreCompileInputs.cache
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\QueryHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\ref\QueryHandling.dll
+F:\Project\Open-Source\Northwind_New\Northwind_New\QueryHandling\obj\Debug\net5.0\QueryHandling.pdb

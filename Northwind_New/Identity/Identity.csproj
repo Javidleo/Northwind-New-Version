@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+	
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net5.0\Identity.deps.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\Identity.dll" />
+    <None Include="bin\Debug\net5.0\Identity.pdb" />
+    <None Include="bin\Debug\net5.0\NEGSO.Utilities.dll" />
+    <None Include="bin\Debug\net5.0\NegsoSmsHandler.dll" />
+    <None Include="bin\Debug\net5.0\NegsoSmsHandler.pdb" />
+    <None Include="bin\Debug\net5.0\ref\Identity.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+    <PackageReference Include="UAParser" Version="3.1.47" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NEGSO.Utilities">
+      <HintPath>..\NEGSO.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
