@@ -2,7 +2,6 @@ F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\bin\Debug\net6.0\
 F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\bin\Debug\net6.0\DomainModel.dll
 F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\bin\Debug\net6.0\ref\DomainModel.dll
 F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\bin\Debug\net6.0\DomainModel.pdb
-F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\obj\Debug\net6.0\DomainModel.csproj.AssemblyReference.cache
 F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\obj\Debug\net6.0\DomainModel.GeneratedMSBuildEditorConfig.editorconfig
 F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\obj\Debug\net6.0\DomainModel.AssemblyInfoInputs.cache
 F:\Project\Open-Source\Northwind_New\Northwind_New\DomainModel\obj\Debug\net6.0\DomainModel.AssemblyInfo.cs

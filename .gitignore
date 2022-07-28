@@ -23,6 +23,9 @@ obj/
 *.userosscache
 *.sln.docstates
 .vs/Northwind_New/v17/.suo
+*.cache
+*.FileListAbsolute.txt
+*.sentinel
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
