@@ -128,6 +128,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.7, )"
+            },
+            "NegsoCustomExceptionHandlingForNet6": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

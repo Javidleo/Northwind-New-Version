@@ -1,5 +1,5 @@
 ﻿using API.Filters;
-using Application;
+using Application.Common;
 using Application.Test.Command;
 using Application.Test.Query;
 using CommandHandling.MediatRAdopter;

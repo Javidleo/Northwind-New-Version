@@ -3,7 +3,7 @@ using DomainModel.Document;
 using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application
+namespace Application.Common
 {
     public interface IReadDbContext
     {
