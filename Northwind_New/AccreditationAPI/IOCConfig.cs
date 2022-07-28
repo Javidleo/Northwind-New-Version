@@ -1,15 +1,14 @@
-﻿using Application;
-using Application.Contracts;
-using Application.Tests.Command;
-using Application.Tests.Query;
+﻿using API.Filters;
+using Application;
+using Application.Test.Command;
+using Application.Test.Query;
 using CommandHandling.MediatRAdopter;
 using DataAccess;
-using DataAccess.Repositories;
 using DataSource;
 using Microsoft.Extensions.DependencyInjection;
 using QueryHandling.MediatRAdopter;
 
-namespace AccreditationAPI
+namespace API
 {
     public static class IOCConfig
     {
@@ -24,10 +23,9 @@ namespace AccreditationAPI
             //Repositories
             // commands
             services.AddMessageHandlers();
-            services.AddStation<CreateTestCommand, LoggingStation<CreateTestCommand>>();
+            services.AddStation<TestCommand, LoggingStation<TestCommand>>();
             //services.AddStation<AddEtebarDorehCommand, LoggingStation<AddEtebarDorehCommand>>();
-            services.AddScoped<Filters.UnitOfWorkFilter>();
-            services.AddTransient<ITestRepository, TestRepository>();
+            services.AddScoped<UnitOfWorkFilter>();
 
 
             //EventHandling.MediatRAdopter.MediatRServiceConfiguration.WrapEventHandler<ProvinceAddedProjector, ProvinceAdded>(services);
@@ -36,7 +34,7 @@ namespace AccreditationAPI
 
         static void AddMessageHandlers(this IServiceCollection services)
         {
-            services.AddCommandHandlersFromAssembly<TestHandler>();
+            services.AddCommandHandlersFromAssembly<TestCommandHandler>();
             services.AddQueryHandlersFromAssembly<TestQueryHandler>();
             //services.AddEventHandlersFromAssembly(Assembly.GetAssembly(typeof(TeamDefinedReactor))
             //                                     , Assembly.GetAssembly(typeof(TeamListProjector))

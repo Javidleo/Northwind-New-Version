@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-namespace AccreditationAPI.Common
+namespace API.Common
 {
     public class CurrentUserService : ICurrentUserService
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace AccreditationAPI.Middlewares
+namespace API.Middlewares
 {
     public class ExceptionMiddleware
     {

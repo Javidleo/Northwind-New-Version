@@ -1,4 +1,4 @@
-﻿namespace AccreditationAPI.DTOs.Post
+﻿namespace API.DTOs.Post
 {
     public class FileInfo
     {

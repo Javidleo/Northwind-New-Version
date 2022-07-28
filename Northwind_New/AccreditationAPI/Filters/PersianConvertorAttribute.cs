@@ -1,8 +1,8 @@
-﻿using AccreditationAPI;
+﻿using API;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 
-namespace AccreditationAPI.Filters
+namespace API.Filters
 {
     public class PersianConvertorAttribute : Attribute, IActionFilter
     {

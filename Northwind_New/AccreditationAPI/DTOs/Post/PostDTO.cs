@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace AccreditationAPI.DTOs.Post
+namespace API.DTOs.Post
 {
     [Serializable]
     public class PostDTO

@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 
 
-namespace AccreditationAPI.Common
+namespace API.Common
 {
     public class ErrorDetails
     {

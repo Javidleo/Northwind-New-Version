@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace AccreditationAPI.DTOs.Post
+namespace API.DTOs.Post
 {
     public class GetPostDTO : FilterModelBase
     {

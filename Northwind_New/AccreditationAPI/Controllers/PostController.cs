@@ -1,4 +1,4 @@
-﻿using AccreditationAPI.DTOs.Post;
+﻿using API.DTOs.Post;
 using CommandHandling.Abstractions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AccreditationAPI.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

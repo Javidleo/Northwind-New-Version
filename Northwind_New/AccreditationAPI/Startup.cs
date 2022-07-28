@@ -1,5 +1,5 @@
-using AccreditationAPI.Filters;
-using AccreditationAPI.Middlewares;
+using API.Filters;
+using API.Middlewares;
 using DataSource;
 using Identity.IOCConfig;
 using Identity.Settings;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 
-namespace AccreditationAPI
+namespace API
 {
     public class Startup
     {

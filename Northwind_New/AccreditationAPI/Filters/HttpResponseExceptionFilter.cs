@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace AccreditationAPI.Filters
+namespace API.Filters
 {
     public class HttpResponseExceptionFilter : IActionFilter, IOrderedFilter
     {

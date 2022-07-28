@@ -4240,9 +4240,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\AccreditationAPI\\AccreditationAPI.csproj",
-      "projectName": "AccreditationAPI",
-      "projectPath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\AccreditationAPI\\AccreditationAPI.csproj",
+      "projectUniqueName": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\AccreditationAPI\\API.csproj",
+      "projectName": "API",
+      "projectPath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\AccreditationAPI\\API.csproj",
       "packagesPath": "C:\\Users\\Javid\\.nuget\\packages\\",
       "outputPath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\AccreditationAPI\\obj\\",
       "projectStyle": "PackageReference",

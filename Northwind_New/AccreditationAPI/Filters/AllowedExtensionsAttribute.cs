@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 
-namespace AccreditationAPI.Filters
+namespace API.Filters
 {
     public class AllowedExtensionsAttribute : ValidationAttribute
     {

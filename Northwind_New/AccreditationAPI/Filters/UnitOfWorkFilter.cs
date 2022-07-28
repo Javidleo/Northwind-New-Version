@@ -1,7 +1,7 @@
 ﻿using DataSource;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace AccreditationAPI.Filters
+namespace API.Filters
 {
     public class UnitOfWorkFilter : IActionFilter
     {

@@ -1,4 +1,4 @@
-﻿namespace AccreditationAPI.DTOs
+﻿namespace API.DTOs
 {
     public abstract class FilterModelBase
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AccreditationAPI
+namespace API
 {
     public static class StringExtentions
     {

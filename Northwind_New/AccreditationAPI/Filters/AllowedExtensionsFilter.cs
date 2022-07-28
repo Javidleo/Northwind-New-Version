@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using CustomException.Exceptions;
 
-namespace AccreditationAPI.Filters
+namespace API.Filters
 {
     public class AllowedExtensionsFilter : ActionFilterAttribute
     {
