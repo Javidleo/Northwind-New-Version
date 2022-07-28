@@ -1,9 +1,11 @@
 ﻿using API.Filters;
 using Application.Common;
+using Application.Contracts;
 using Application.Test.Command;
 using Application.Test.Query;
 using CommandHandling.MediatRAdopter;
 using DataAccess;
+using DataAccess.Repositories;
 using DataSource;
 using Microsoft.Extensions.DependencyInjection;
 using QueryHandling.MediatRAdopter;
@@ -21,6 +23,7 @@ namespace API
             services.AddScoped<IUnitOfWork>(x => x.GetService<ReadAndWriteDbContext>());
 
             //Repositories
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
             // commands
             services.AddMessageHandlers();
             services.AddStation<TestCommand, LoggingStation<TestCommand>>();

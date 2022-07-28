@@ -11,6 +11,8 @@ namespace DataAccess
         public void MarkAsModified<Entity>(Entity entity) where Entity : class;
         public void MarkAsDeleted<Entity>(Entity entity) where Entity : class;
 
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostAttachment> PostAttachments { get; set; }
         public DbSet<Category> Category { get; set; }
