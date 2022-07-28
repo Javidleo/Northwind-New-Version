@@ -21,6 +21,7 @@ namespace DataSource.Mapping
 
             builder.Property(e => e.Phone).HasMaxLength(24);
 
+            builder.HasMany(i => i.Orders).WithOne(i => i.Shipper).HasForeignKey(i => i.ShipVia);
         }
     }
 }

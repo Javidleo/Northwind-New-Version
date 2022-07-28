@@ -16,9 +16,7 @@ namespace DataSource.Mapping
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.HasOne(d => d.Region)
-                .WithMany(p => p.Territories)
-                .HasForeignKey(d => d.RegionId);
+            builder.HasMany(i => i.EmployeeTerritories).WithOne(i => i.Territory).HasForeignKey(i => i.TerritoryId);
         }
     }
 }

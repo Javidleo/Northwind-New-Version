@@ -20,8 +20,6 @@ namespace DataSource.Mapping
 
             builder.Property(e => e.UnitPrice).HasColumnType("money");
 
-            builder.HasOne(i => i.Order).WithMany(i => i.OrderDetails).HasForeignKey(i => i.OrderId);
-            builder.HasOne(i => i.Product).WithMany(i => i.OrderDetails).HasForeignKey(i => i.ProductId);
         }
     }
 }

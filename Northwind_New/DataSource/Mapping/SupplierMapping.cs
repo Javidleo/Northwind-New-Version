@@ -1,11 +1,6 @@
 ﻿using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataSource.Mapping
 {
@@ -39,6 +34,7 @@ namespace DataSource.Mapping
 
             builder.Property(e => e.Region).HasMaxLength(15);
 
+            builder.HasMany(i => i.Products).WithOne(i => i.Supplier).HasForeignKey(i => i.SupplierId);
         }
     }
 }

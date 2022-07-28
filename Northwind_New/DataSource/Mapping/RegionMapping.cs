@@ -13,6 +13,8 @@ namespace DataSource.Mapping
             builder.Property(i => i.RegionDescription)
                 .IsRequired()
                 .HasMaxLength(50);
+
+            builder.HasMany(i => i.Territories).WithOne(i => i.Region).HasForeignKey(i => i.RegionId);
         }
     }
 }

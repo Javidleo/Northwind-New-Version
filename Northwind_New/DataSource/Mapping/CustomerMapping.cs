@@ -35,6 +35,8 @@ namespace DataSource.Mapping
             builder.Property(e => e.PostalCode).HasMaxLength(10);
 
             builder.Property(e => e.Region).HasMaxLength(15);
+
+            builder.HasMany(i => i.Orders).WithOne(i => i.Customer).HasForeignKey(i => i.CustomerId);
         }
     }
 }

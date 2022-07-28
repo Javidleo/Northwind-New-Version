@@ -1,11 +1,6 @@
 ﻿using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataSource.Mapping
 {
@@ -41,9 +36,7 @@ namespace DataSource.Mapping
 
             builder.Property(e => e.ShippedDate).HasColumnType("datetime");
 
-            builder.HasOne(d => d.Shipper)
-                .WithMany(p => p.Orders)
-                .HasForeignKey(d => d.ShipVia);
+            builder.HasMany(i => i.OrderDetails).WithOne(i => i.Order).HasForeignKey(i => i.OrderId);
         }
     }
 }

@@ -53,6 +53,8 @@ namespace DataSource.Mapping
             builder.HasOne(d => d.Manager)
                     .WithMany(p => p.DirectReports)
                     .HasForeignKey(d => d.ReportsTo);
+
+            builder.HasMany(i => i.EmployeeTerritories).WithOne(i => i.Employee).HasForeignKey(i => i.EmployeeId);
         }
     }
 }

@@ -16,7 +16,8 @@ namespace DataSource.Mapping
             builder.Property(e => e.Description).HasColumnType("ntext");
 
             builder.Property(e => e.Picture).HasColumnType("image");
-            builder.HasMany(i => i.Products).WithOne(i => i.Category);
+
+            builder.HasMany(i => i.Products).WithOne(i => i.Category).HasForeignKey(i => i.CategoryId);
         }
     }
 }

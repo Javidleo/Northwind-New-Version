@@ -25,6 +25,7 @@ namespace DataSource.Mapping
 
             builder.Property(e => e.UnitsOnOrder).HasDefaultValueSql("((0))");
 
+            builder.HasMany(i => i.OrderDetails).WithOne(i => i.Product).HasForeignKey(i => i.ProductId);
         }
     }
 }
