@@ -5,14 +5,14 @@ using DomainModel.Entities;
 
 namespace Application.Categories.Commands
 {
-    public class UpsertCategoryCommandHandler : IHandleCommand<CategoryUpsertCommand>
+    public class UpsertCategoryCommandHandler : IHandleCommand<UpsertCategoryCommand>
     {
         private readonly ICategoryRepository _categoryRepository;
         public UpsertCategoryCommandHandler(ICategoryRepository categoryRepository)
         => _categoryRepository = categoryRepository;
        
 
-        public async Task Handle(CategoryUpsertCommand command)
+        public async Task Handle(UpsertCategoryCommand command)
         {
             if (command.id.HasValue)
             {

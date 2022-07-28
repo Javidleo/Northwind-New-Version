@@ -9,11 +9,11 @@ using Xunit;
 
 namespace NorthwindTest.Unit.Test.Categories
 {
-    public class CateogryTests
+    public class CategoryHandlerTests
     {
         private readonly Mock<ICategoryRepository> _categoryRepository;
         private readonly UpsertCategoryCommandHandler _commandHandler;
-        public CateogryTests()
+        public CategoryHandlerTests()
         {
             _categoryRepository = new Mock<ICategoryRepository>();
             _commandHandler = new UpsertCategoryCommandHandler(_categoryRepository.Object);

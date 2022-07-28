@@ -20,7 +20,7 @@ namespace NorthwindTest.Unit.CommandBuilder
             return this;
         }
 
-        public CategoryUpsertCommand BuildAsUpsertCommand()
-        => CategoryUpsertCommand.Create(Id, Name, Description, Picture);
+        public UpsertCategoryCommand BuildAsUpsertCommand()
+        => UpsertCategoryCommand.Create(Id, Name, Description, Picture);
     }
 }
