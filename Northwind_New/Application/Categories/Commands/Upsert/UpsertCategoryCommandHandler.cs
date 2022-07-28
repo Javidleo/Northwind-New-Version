@@ -3,20 +3,20 @@ using CommandHandling.Abstractions;
 using CustomException.Exceptions;
 using DomainModel.Entities;
 
-namespace Application.Categories.Commands
+namespace Application.Categories.Commands.Upsert
 {
     public class UpsertCategoryCommandHandler : IHandleCommand<UpsertCategoryCommand>
     {
         private readonly ICategoryRepository _categoryRepository;
         public UpsertCategoryCommandHandler(ICategoryRepository categoryRepository)
         => _categoryRepository = categoryRepository;
-       
 
-        public async Task Handle(UpsertCategoryCommand command)
+
+        public Task Handle(UpsertCategoryCommand command)
         {
             if (command.id.HasValue)
             {
-                var category = await _categoryRepository.Find(command.id.Value);
+                var category = _categoryRepository.Find(command.id.Value);
                 if (category is null)
                     throw new NotFoundException("category not founded");
 
@@ -29,7 +29,7 @@ namespace Application.Categories.Commands
                 Category category = Category.Create(command.Name, command.Description, command.Picture);
                 _categoryRepository.Add(category);
             }
-
+            return Task.CompletedTask;
         }
     }
 }

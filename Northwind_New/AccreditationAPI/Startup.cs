@@ -74,7 +74,7 @@ namespace API
             {
                 config.RespectBrowserAcceptHeader = true;
                 config.ReturnHttpNotAcceptable = true;
-                config.Filters.Add<UnitOfWorkFilter>();
+                
                 // config.Filters.Add(new HttpResponseExceptionFilter());
             });
 

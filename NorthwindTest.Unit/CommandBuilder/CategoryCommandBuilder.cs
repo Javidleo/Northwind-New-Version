@@ -1,4 +1,6 @@
-﻿using Application.Categories.Commands;
+﻿using Application.Categories.Commands.Delete;
+using Application.Categories.Commands.Upsert;
+using System;
 
 namespace NorthwindTest.Unit.CommandBuilder
 {
@@ -22,5 +24,8 @@ namespace NorthwindTest.Unit.CommandBuilder
 
         public UpsertCategoryCommand BuildAsUpsertCommand()
         => UpsertCategoryCommand.Create(Id, Name, Description, Picture);
+
+        public DeleteCategoryCommand BuildAsDeleteCommand()
+        => DeleteCategoryCommand.Create(Id.Value);
     }
 }

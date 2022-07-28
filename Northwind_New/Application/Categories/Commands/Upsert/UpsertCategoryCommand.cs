@@ -1,7 +1,7 @@
 ﻿using CommandHandling.Abstractions;
 using CustomException.Exceptions;
 
-namespace Application.Categories.Commands
+namespace Application.Categories.Commands.Upsert
 {
     public record UpsertCategoryCommand(int? id, string Name, string Description, byte[] Picture) : Acommand(0)
     {
