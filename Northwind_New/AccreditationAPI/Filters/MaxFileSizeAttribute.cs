@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace KnowledgeManagementAPI.Filters
+namespace AccreditationAPI.Filters
 {
     public class MaxFileSizeAttribute : ValidationAttribute
     {

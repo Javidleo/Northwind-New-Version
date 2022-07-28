@@ -1,14 +1,15 @@
-﻿using CommandHandling.MediatRAdopter;
+﻿using Application;
+using Application.Contracts;
+using Application.Tests.Command;
+using Application.Tests.Query;
+using CommandHandling.MediatRAdopter;
+using DataAccess;
+using DataAccess.Repositories;
 using DataSource;
 using Microsoft.Extensions.DependencyInjection;
 using QueryHandling.MediatRAdopter;
-using ReadModels.Common;
-using ReadModels.Queries.PostQueries.GetPostList;
-using UseCases.Commands.PostCommands;
-using UseCases.Common;
-using static UseCases.Commands.PostCommands.PostCommand;
 
-namespace KnowledgeManagementAPI
+namespace AccreditationAPI
 {
     public static class IOCConfig
     {
@@ -23,9 +24,10 @@ namespace KnowledgeManagementAPI
             //Repositories
             // commands
             services.AddMessageHandlers();
-            services.AddStation<PostCommand, LoggingStation<PostCommand>>();
+            services.AddStation<CreateTestCommand, LoggingStation<CreateTestCommand>>();
             //services.AddStation<AddEtebarDorehCommand, LoggingStation<AddEtebarDorehCommand>>();
             services.AddScoped<Filters.UnitOfWorkFilter>();
+            services.AddTransient<ITestRepository, TestRepository>();
 
 
             //EventHandling.MediatRAdopter.MediatRServiceConfiguration.WrapEventHandler<ProvinceAddedProjector, ProvinceAdded>(services);
@@ -34,8 +36,8 @@ namespace KnowledgeManagementAPI
 
         static void AddMessageHandlers(this IServiceCollection services)
         {
-            services.AddCommandHandlersFromAssembly<PostHandler>();
-            services.AddQueryHandlersFromAssembly<GetPostListQuery>();
+            services.AddCommandHandlersFromAssembly<TestHandler>();
+            services.AddQueryHandlersFromAssembly<TestQueryHandler>();
             //services.AddEventHandlersFromAssembly(Assembly.GetAssembly(typeof(TeamDefinedReactor))
             //                                     , Assembly.GetAssembly(typeof(TeamListProjector))
             //                                     );

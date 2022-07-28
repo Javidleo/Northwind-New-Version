@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application;
+using Microsoft.EntityFrameworkCore;
 using QueryHandling.Abstractions;
 using ReadModels.Common;
 using System.Linq;

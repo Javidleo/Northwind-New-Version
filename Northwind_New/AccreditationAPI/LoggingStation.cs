@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace KnowledgeManagementAPI
+namespace AccreditationAPI
 {
     public class LoggingStation<TCommand> : ICommandStation<TCommand>
         where TCommand : Acommand

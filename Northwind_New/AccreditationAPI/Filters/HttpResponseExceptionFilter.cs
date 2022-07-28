@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CustomException.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using UseCases.Common.Exceptions;
 
-namespace KnowledgeManagementAPI.Filters
+namespace AccreditationAPI.Filters
 {
     public class HttpResponseExceptionFilter : IActionFilter, IOrderedFilter
     {
@@ -18,9 +14,9 @@ namespace KnowledgeManagementAPI.Filters
         {
             if (context.Exception is HttpResponseException exception)
             {
-                context.Result = new ObjectResult(exception.Value)
+                context.Result = new ObjectResult(exception.Message)
                 {
-                    StatusCode = exception.Status,
+                    StatusCode = 406,
                 };
                 context.ExceptionHandled = true;
             }

@@ -1,4 +1,5 @@
 ﻿using CommandHandling.Abstractions;
+using DataAccess;
 using DomainModel;
 using System;
 using System.Collections.Generic;

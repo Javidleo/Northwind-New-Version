@@ -1,4 +1,4 @@
-﻿namespace KnowledgeManagementAPI.DTOs.Post
+﻿namespace AccreditationAPI.DTOs.Post
 {
     public class FileInfo
     {

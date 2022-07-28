@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
 
-namespace KnowledgeManagementAPI
+namespace AccreditationAPI
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class ErrorHandlingMiddleware

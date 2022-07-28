@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CustomException.Exceptions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
-using UseCases.Common.Exceptions;
 
-namespace KnowledgeManagementAPI.Filters
+namespace AccreditationAPI.Filters
 {
     public class MaxFileSizeFilter : ActionFilterAttribute
     {

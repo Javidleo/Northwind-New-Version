@@ -1,4 +1,5 @@
-﻿using LinqKit;
+﻿using Application;
+using LinqKit;
 using NEGSO.Utilities;
 using QueryHandling.Abstractions;
 using ReadModels.Common;

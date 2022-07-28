@@ -1,5 +1,5 @@
-﻿using QueryHandling.Abstractions;
-using ReadModels.Common;
+﻿using Application;
+using QueryHandling.Abstractions;
 using ReadModels.DomainModel.Document;
 using System;
 using System.Data.SqlClient;

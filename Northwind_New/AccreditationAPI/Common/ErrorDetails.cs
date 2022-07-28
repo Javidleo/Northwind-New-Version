@@ -1,8 +1,7 @@
-﻿
-using System.Text.Json;
+﻿using System.Text.Json;
 
 
-namespace KnowledgeManagementAPI.Common
+namespace AccreditationAPI.Common
 {
     public class ErrorDetails
     {

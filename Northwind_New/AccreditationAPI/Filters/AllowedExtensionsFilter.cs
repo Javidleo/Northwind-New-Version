@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.IO;
 using System.Linq;
-using UseCases.Common.Exceptions;
+using CustomException.Exceptions;
 
-namespace KnowledgeManagementAPI.Filters
+namespace AccreditationAPI.Filters
 {
     public class AllowedExtensionsFilter : ActionFilterAttribute
     {

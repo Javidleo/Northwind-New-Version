@@ -1,7 +1,8 @@
+using AccreditationAPI.Filters;
+using AccreditationAPI.Middlewares;
 using DataSource;
 using Identity.IOCConfig;
 using Identity.Settings;
-using KnowledgeManagementAPI.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 
-namespace KnowledgeManagementAPI
+namespace AccreditationAPI
 {
     public class Startup
     {
@@ -19,7 +20,6 @@ namespace KnowledgeManagementAPI
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -74,7 +74,7 @@ namespace KnowledgeManagementAPI
             {
                 config.RespectBrowserAcceptHeader = true;
                 config.ReturnHttpNotAcceptable = true;
-                config.Filters.Add<Filters.UnitOfWorkFilter>();
+                config.Filters.Add<UnitOfWorkFilter>();
                 // config.Filters.Add(new HttpResponseExceptionFilter());
             });
 

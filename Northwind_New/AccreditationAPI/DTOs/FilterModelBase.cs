@@ -1,5 +1,4 @@
-﻿
-namespace KnowledgeManagementAPI.DTOs
+﻿namespace AccreditationAPI.DTOs
 {
     public abstract class FilterModelBase
     {
@@ -16,7 +15,7 @@ namespace KnowledgeManagementAPI.DTOs
             }
             set
             {
-                _pageSize = (value > maxPageSize) ? maxPageSize : value;
+                _pageSize = value > maxPageSize ? maxPageSize : value;
             }
         }
 

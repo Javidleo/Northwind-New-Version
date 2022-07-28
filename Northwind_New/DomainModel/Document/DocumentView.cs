@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ReadModels.DomainModel.Document
+namespace DomainModel.Document
 {
     public class DocumentView
     {

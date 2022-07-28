@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using AccreditationAPI;
+using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 
-namespace KnowledgeManagementAPI.Filters
+namespace AccreditationAPI.Filters
 {
     public class PersianConvertorAttribute : Attribute, IActionFilter
     {
@@ -14,7 +15,7 @@ namespace KnowledgeManagementAPI.Filters
             var DtoProperties = context.ActionArguments[ParameterName].GetType().GetProperties();
             if (DtoProperties != null)
                 foreach (var item in DtoProperties)
-                    if (item.PropertyType == typeof(System.String))
+                    if (item.PropertyType == typeof(string))
                     {
                         object paramValue = item.GetValue(context.ActionArguments[ParameterName]);
                         if (paramValue != null)

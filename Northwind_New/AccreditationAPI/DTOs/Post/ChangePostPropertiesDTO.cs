@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace KnowledgeManagementAPI.DTOs.Post
+namespace AccreditationAPI.DTOs.Post
 {
     [Serializable]
     public class ChangePostPropertiesDTO
