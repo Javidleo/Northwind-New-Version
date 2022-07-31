@@ -122,15 +122,7 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReadAndWriteDbContext context)
         {
-            //if (env.IsDevelopment()) //|| env.IsProduction()          
-            //                         // app.UseDeveloperExceptionPage();
-            //    app.UseExceptionHandler("/error-local-development");
-            //else
-            //{
-            //    app.UseExceptionHandler("/error");
-            //    app.UseHsts();
-            //}
-
+           
             if (!env.IsDevelopment())
             {
                 app.UseHsts();
@@ -140,15 +132,7 @@ namespace API
             // app.ConfigureExceptionHandler();
             app.UseMiddleware<ExceptionMiddleware>();
 
-            //app.UseExceptionHandler(c => c.Run(async context =>
-            //{
-            //    var exception = context.Features
-            //        .Get<IExceptionHandlerPathFeature>()
-            //        .Error;
-            //    var response = new { error = exception.Message , code=context.Response.StatusCode};
-            //    await context.Response.WriteAsJsonAsync(response);
-            //}));
-
+            
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KnowledgeManagementAPI v1"));
 
@@ -160,8 +144,6 @@ namespace API
 
             app.UseAuthentication();
             app.UseAuthorization();
-
-
 
             app.UseEndpoints(endpoints =>
             {

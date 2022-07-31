@@ -20,5 +20,24 @@ namespace DomainModel.Entities
         public string Fax { get; private set; }
 
         public ICollection<Order> Orders { get; private set; }
+
+        private Customer(string id, string address, string city, string companyName, string contactName,
+                                        string contactTitle, string country, string fax, string phone, string postalCard)
+        {
+            Id = id;
+            Address = address;
+            CompanyName = CompanyName;
+            ContactName = ContactName;
+            ContactTitle = ContactTitle;
+            Country = country;
+            Fax = fax;
+            Phone = phone;
+            PostalCode = postalCard;
+        }
+
+        public static Customer Create(string id, string address, string city, string companyName, string contactName,
+                                        string contactTitle, string country, string fax, string phone, string postalCard)
+
+        => new(id,address,city,companyName,contactName,contactTitle,country,fax,phone,postalCard);
     }
 }
