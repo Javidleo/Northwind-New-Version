@@ -1409,7 +1409,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Application": "1.0.0",
           "DataAccess": "1.0.0",
+          "DomainModel": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7"
         },
@@ -4502,8 +4504,8 @@
     },
     "DataAccess/1.0.0": {
       "type": "project",
-      "path": "../../DataAccess/DataAccess.csproj",
-      "msbuildProject": "../../DataAccess/DataAccess.csproj"
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
     },
     "DataSource/1.0.0": {
       "type": "project",
@@ -4523,7 +4525,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DataAccess >= 1.0.0",
+      "Application >= 1.0.0",
       "DataSource >= 1.0.0",
       "Identity >= 1.0.0",
       "MediatR >= 10.0.1",
@@ -4568,8 +4570,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\Project\\Open-Source\\Northwind_New\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "F:\\Project\\Open-Source\\Northwind_New\\DataAccess\\DataAccess.csproj"
+            "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\Application\\Application.csproj": {
+              "projectPath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\Application\\Application.csproj"
             },
             "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\DataSource\\DataSource.csproj": {
               "projectPath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\DataSource\\DataSource.csproj"

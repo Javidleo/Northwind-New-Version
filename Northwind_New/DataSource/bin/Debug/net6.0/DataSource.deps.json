@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v6.0": {
       "DataSource/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "DataAccess": "1.0.0",
+          "DomainModel": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.7"
