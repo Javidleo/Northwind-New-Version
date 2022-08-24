@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "WydtKU6FvR3lt0R9UvHA87eSuxr1De7UJzOUJ7UtpUabV8QjD20Wf4fzS5QwaUp3O7O1YyZe6PQUeXkPNW4lKQ==",
+  "dgSpecHash": "haVG/Q0ZTRVj3gm2aPJqerBuu3ETxqnK+5uUJrt0WHRU1Q9v6fZFRVwhvYj1spWN/M2FIyfhxq8HFwFt2PMHjw==",
   "success": true,
   "projectFilePath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\QueryHandling\\QueryHandling.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Javid\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
-    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

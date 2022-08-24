@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
+using Application;
 
 namespace API
 {
@@ -27,29 +28,9 @@ namespace API
         {
             services.AddDbContext<ReadAndWriteDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("KnowledgeManagementDBConnection")));
-            ////services.AddScoped<IReadDbContext, ReadDbContext>();
-            ////services.AddScoped<IWriteDBContext, WriteDBContext>(x => x.GetService<WriteDBContext>());
-            ////services.AddScoped<IUnitOfWork, WriteDBContext>(x => x.GetService<WriteDBContext>());
-            ///////////////////////////////////////////////////////
-            ////services.AddScoped<ITeamRepository, TeamRepository>();
-            //services.AddScoped<ITeamRepository, TeamRepository>(x => x.GetService<TeamRepository>());
-            ///////////////////////////////////////////////////////
 
-            //services.AddScoped<IHandleCommand<DefineTeamCommand>, DefineTeamCommandHandler>();
-            //services.AddScoped<IRequestHandler<MediatRCommandEnvelope<DefineTeamCommand>, Unit>, MediatRHandlerAdopte<DefineTeamCommand>>();
-
-            ////services.AddCommandHandlersFromAssembly<DefineTeamCommandHandler>();
-            ////services.AddQueryHandlersFromAssembly<GetAllTeamsQueryhandler>();
-
-            ////services.AddBehavior<DefineTeamCommand, LoggingStation<DefineTeamCommand>>();
-            ////services.AddScoped<Filters.UnitOfWorkFilter>();
-
-            //services.Configure<SiteSettings>(options => Configuration.Bind(options));
-
-
-            ///
-            ///to use Identity this line is needed to Add Identity Configuration 
-            ///
+            // Adding Services ;
+            services.AddApplications();
             services.ConfigureIdentity(Configuration);
 
             services.AddApplicationServices();

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QF02uErdN3S+PsCfsGPzbkRXpemtznkxn1u6Ix+oV6PrQsHfD9KBQBFNrtOMhv8p6YTMlzV8GAtqkuhA2NWqsA==",
+  "dgSpecHash": "JZLs0wZeqswdSGOM4FAqEnV/45ycGHCIiUdzbwcUNGtL6iUikCAy7LAYXMCsugNzl0bblLV91LMKyKzun2Cc2w==",
   "success": true,
   "projectFilePath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\DataSource\\DataSource.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,9 @@
     "C:\\Users\\Javid\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\fluentvalidation\\10.4.0\\fluentvalidation.10.4.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\Javid\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
-    "C:\\Users\\Javid\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\2.2.0\\microsoft.aspnetcore.connections.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",

@@ -14,6 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -27,10 +29,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\DataAccess\DataAccess.csproj" />
-    <ProjectReference Include="..\CommandHandling\CommandHandling.csproj" />
     <ProjectReference Include="..\DataSource\DataSource.csproj" />
     <ProjectReference Include="..\Identity\Identity.csproj" />
-    <ProjectReference Include="..\QueryHandling\QueryHandling.csproj" />
   </ItemGroup>
 
 </Project>

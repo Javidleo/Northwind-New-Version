@@ -4,15 +4,11 @@ F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\D
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\ref\DataSource.dll
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\DataSource.pdb
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\Application.dll
-F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\CommandHandling.dll
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\DataAccess.dll
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\DomainModel.dll
-F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\QueryHandling.dll
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\DataAccess.pdb
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\Application.pdb
-F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\CommandHandling.pdb
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\DomainModel.pdb
-F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\bin\Debug\net6.0\QueryHandling.pdb
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\obj\Debug\net6.0\DataSource.csproj.AssemblyReference.cache
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\obj\Debug\net6.0\DataSource.GeneratedMSBuildEditorConfig.editorconfig
 F:\Project\Open-Source\Northwind_New\Northwind_New\DataSource\obj\Debug\net6.0\DataSource.AssemblyInfoInputs.cache

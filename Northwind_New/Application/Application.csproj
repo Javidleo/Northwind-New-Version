@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,20 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="dfslj\**" />
+    <EmbeddedResource Remove="dfslj\**" />
+    <None Remove="dfslj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="NegsoCustomExceptionHandlingForNet6" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommandHandling\CommandHandling.csproj" />
     <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
-    <ProjectReference Include="..\QueryHandling\QueryHandling.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Customers\Queries\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

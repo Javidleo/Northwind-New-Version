@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "qJxd1K1eIG3554OVYVx6KdURqiVLyzsbxZn/wuz6Bu+VF3RkYbSUplCPd4k/vLQhQ5AGGWFpGv61xxzq7Dv65Q==",
+  "dgSpecHash": "Rnrnu2+mHulcNO85NzDmgeCvbyn3nUqn4dwvFhsCH8kfuiEXUrlbvu8uh1yd8eurHQdWSvXvMf6spUrBRpW/pw==",
   "success": true,
   "projectFilePath": "F:\\Project\\Open-Source\\Northwind_New\\Northwind_New\\CommandHandling\\CommandHandling.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Javid\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Javid\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
-    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\Javid\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

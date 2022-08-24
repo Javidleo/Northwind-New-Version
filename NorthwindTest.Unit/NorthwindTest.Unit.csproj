@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -24,7 +24,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Northwind_New\Application\Application.csproj" />
-    <ProjectReference Include="..\Northwind_New\CommandHandling\CommandHandling.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommandBuilder\" />
+    <Folder Include="Test\" />
   </ItemGroup>
 
 </Project>
