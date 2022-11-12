@@ -2,7 +2,7 @@
 
 namespace Identity.Models
 {
-    public class AppUserClaim : IdentityUserClaim<string>
+    public class AppUserClaim : IdentityUserClaim<int>
     {
     }
 }

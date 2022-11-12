@@ -1,20 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System;
 using System.ComponentModel.DataAnnotations;
-
 
 namespace Identity.Models
 {
-    public class AppUserRole : IdentityUserRole<string>
+    public class AppUserRole : IdentityUserRole<int>
     {
         public AppUserRole()
         {
 
-        }
-        public AppUserRole(DateTime fromDate, DateTime? toDate) : this()
-        {
-            FromDate = fromDate;
-            ToDate = toDate;
         }
 
         [DataType(DataType.Date)]
@@ -23,15 +16,15 @@ namespace Identity.Models
         [DataType(DataType.Date)]
         public DateTime? ToDate { get; set; }
 
-        [StringLength(5)]
-        public string FromTime { get; set; }
+        private AppUserRole(int roleId, int userId, DateTime fromDate, DateTime? toDate)
+        {
+            RoleId = roleId;
+            UserId = UserId;
+            FromDate = fromDate.Date;
+            ToDate = toDate == null ? null : toDate.Value.Date;
+        }
 
-        [StringLength(5)]
-        public string ToTime { get; set; }
-
-        public virtual AppUser User { get; set; }
-
-        public virtual AppRole Role { get; set; }
-
+        public static AppUserRole Create(int roleId, int userId, DateTime fromDate, DateTime? toDate)
+        => new(roleId, userId, fromDate, toDate);
     }
 }

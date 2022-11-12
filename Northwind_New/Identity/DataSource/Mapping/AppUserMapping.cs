@@ -8,8 +8,23 @@ namespace Identity.DataSource.Mapping
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
-            builder.HasIndex(u => u.UserIdentity).IsUnique();
-            builder.HasIndex(u => u.Email).IsUnique();
+
+            builder.HasKey(i => i.Id);
+
+            builder.Property(i => i.Guid).ValueGeneratedOnAdd();
+
+            builder.Property(i => i.FirstName).IsRequired(false).HasMaxLength(100);
+            builder.Property(i => i.LastName).IsRequired(false).HasMaxLength(100);
+            builder.Property(i => i.Email).IsRequired(false).HasMaxLength(250);
+            builder.Property(i => i.NormalizedEmail).IsRequired(false).HasMaxLength(250);
+            builder.Property(i => i.PasswordHash).HasMaxLength(256);
+            builder.Property(i => i.SecurityStamp).HasMaxLength(50);
+            builder.Property(i => i.ConcurrencyStamp).HasMaxLength(50);
+            builder.Property(i => i.PhoneNumber).HasMaxLength(11);
+            builder.Property(i => i.LockoutEnd).IsRequired(false);
+            builder.Property(i => i.BirthDate).IsRequired(false);
+            builder.Property(i => i.Gender).IsRequired(false);
+
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Identity.Models
 {
-    public class AppUserToken : IdentityUserToken<string>
+    public class AppUserTokens : IdentityUserToken<int>
     {
     }
 }

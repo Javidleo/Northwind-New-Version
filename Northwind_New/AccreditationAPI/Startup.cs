@@ -1,8 +1,9 @@
 using API.Filters;
 using API.Middlewares;
+using Application;
+using DataAccess;
 using DataSource;
-using Identity.IOCConfig;
-using Identity.Settings;
+using Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
-using Application;
 
 namespace API
 {
@@ -27,13 +27,14 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ReadAndWriteDbContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("KnowledgeManagementDBConnection")));
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Adding Services ;
             services.AddApplications();
-            services.ConfigureIdentity(Configuration);
+            services.AddRepositories();
 
-            services.AddApplicationServices();
+            services.AddIdentity(Configuration);
+
             //  services.AddTransient<IdentityIOCConfiguration>();
 
 
@@ -55,7 +56,7 @@ namespace API
             {
                 config.RespectBrowserAcceptHeader = true;
                 config.ReturnHttpNotAcceptable = true;
-                
+                config.Filters.Add<UnitOfWorkFilter>();
                 // config.Filters.Add(new HttpResponseExceptionFilter());
             });
 
@@ -103,7 +104,7 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReadAndWriteDbContext context)
         {
-           
+
             if (!env.IsDevelopment())
             {
                 app.UseHsts();
@@ -113,7 +114,7 @@ namespace API
             // app.ConfigureExceptionHandler();
             app.UseMiddleware<ExceptionMiddleware>();
 
-            
+
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KnowledgeManagementAPI v1"));
 

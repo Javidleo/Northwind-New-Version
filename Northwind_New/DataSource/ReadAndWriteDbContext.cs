@@ -1,4 +1,5 @@
 ﻿using Application.Common;
+using Application.Common.Interfaces;
 using DataAccess;
 using DataSource.Mapping;
 using DomainModel;
@@ -6,6 +7,7 @@ using DomainModel.Common;
 using DomainModel.Document;
 using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,6 +35,7 @@ namespace DataSource
 
         public void MarkAsDeleted<Entity>(Entity entity) where Entity : class
         => Entry(entity).State = EntityState.Deleted;
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

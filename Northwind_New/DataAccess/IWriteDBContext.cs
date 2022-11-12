@@ -2,6 +2,7 @@
 using DomainModel.Document;
 using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace DataAccess
 {
@@ -11,6 +12,8 @@ namespace DataAccess
         public void MarkAsModified<Entity>(Entity entity) where Entity : class;
         public void MarkAsDeleted<Entity>(Entity entity) where Entity : class;
 
+        DbSet<Entity> Set<Entity>() where Entity :class ;
+        EntityEntry Entry(object entity);
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 
         public DbSet<Post> Posts { get; set; }
@@ -18,6 +21,8 @@ namespace DataAccess
         public DbSet<Category> Category { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Employee> Employee { get; set; }
+
+
         public DbSet<EmployeeTerritory> EmployeeTerritory { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<OrderDetail> OrderDetail { get; set; }

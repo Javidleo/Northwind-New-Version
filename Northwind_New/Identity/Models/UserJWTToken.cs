@@ -1,22 +1,29 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Identity.Models
 {
     public class UserJWTToken
     {
+        [Key]
         public int jwt_Id { get; set; }
-        public string jwt_AccessTokenHash { get; set; }
 
-        public DateTime jwt_AccessTokenExpiresDateTime { get; set; }
-
-        public string jwt_RefreshTokenIdHash { get; set; }
-
-        public string jwt_RefreshTokenIdHashSource { get; set; }
+        public string jwt_RefreshToken { get; set; }
 
         public DateTime jwt_RefreshTokenExpiresDateTime { get; set; }
 
-        public string usr_guid { get; set; }
-        public string jwt_Source { get; set; }
+        public Guid usr_guid { get; set; }
 
+        public UserJWTToken()
+        {
+
+        }
+        private UserJWTToken(Guid userGuid, string refreshToken, DateTime refreshTokenExpireationTime)
+        {
+            usr_guid = userGuid;
+            jwt_RefreshToken = refreshToken;
+            jwt_RefreshTokenExpiresDateTime = refreshTokenExpireationTime;
+        }
+        public static UserJWTToken Create(Guid userGuid, string refreshToken, DateTime refreshTokenExpireationTime)
+        => new(userGuid, refreshToken, refreshTokenExpireationTime);
     }
 }

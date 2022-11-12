@@ -2,7 +2,7 @@
 
 namespace Identity.Models
 {
-    public class AppRoleClaim : IdentityRoleClaim<string>
+    public class AppRoleClaim : IdentityRoleClaim<int>
     {
     }
 }

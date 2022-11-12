@@ -1,57 +1,67 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Identity.Models
 {
-    public class AppUser : IdentityUser
+    public class AppUser : IdentityUser<int>
     {
-        [StringLength(50)]
-        public string FirstName { get; set; }
+        public Guid Guid { get; set; }
 
-        [StringLength(50)]
-        public string LastName { get; set; }
+        public string? FirstName { get; set; }
 
-        [StringLength(50)]
-        public string UserIdentity { get; set; }
+        public string? LastName { get; set; }
 
-        [StringLength(10)]
-        public string NationalCode { get; set; }
-
-        [StringLength(10)]
-        public string BirthDate { get; set; }
-
-        public Int16? Gender { get; set; }
         public bool IsActive { get; set; } = true;
 
-        [NotMapped]
-        public string DisplayName
+        public DateTime? BirthDate { get; set; }
+
+        public bool? Gender { get; set; }
+
+        #region Normal Create Style
+
+        public AppUser(string firstName, string lastName, string userName, string phoneNumber, string email)
         {
-            get
-            {
-                var displayName = $"{FirstName} {LastName}";
-                return string.IsNullOrWhiteSpace(displayName) ? UserName : displayName;
-            }
+            FirstName = firstName;
+            LastName = lastName;
+            UserName = userName;
+            PhoneNumber = phoneNumber;
+            Email = email;
         }
 
-        [NotMapped]
-        public string GenderTitle
+        public static AppUser Create(string firstName, string lastName, string userName, string phoneNumber, string email)
+       => new(firstName, lastName, userName, phoneNumber, email);
+
+        #endregion
+
+        #region Google Authentication Create Style
+        public AppUser(string email, string firstName, string lastName, bool emailConfirmed)
         {
-            get
-            {
-                return Gender switch
-                {
-                    null => " ",
-                    1 => "مرد",
-                    2 => "زن",
-                    _ => "نامشخص",
-                };
-            }
+            Email = email;
+            FirstName = FirstName;
+            LastName = lastName;
+            EmailConfirmed = emailConfirmed;
+        }
+        public static AppUser Create(string email, string firstName, string lastName, bool emailConfirmed = true)
+        => new(email, firstName, lastName, emailConfirmed);
+
+        #endregion
+
+        #region Sms Authentication Create Style
+        private AppUser(string userName, string phoneNumber)
+        {
+            UserName = userName;
+            PhoneNumber = phoneNumber;
         }
 
-        public virtual ICollection<AppUserRole> Roles { get; set; }
-        public virtual ICollection<UserSmsToken> UserSmsTokens { get; set; }
+        public static AppUser Create(string userName, string phoneNumber)
+        => new(userName, phoneNumber);
+
+        #endregion
+
+        public void SetInformation(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
     }
 }

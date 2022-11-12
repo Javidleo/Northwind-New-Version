@@ -2,7 +2,7 @@
 
 namespace Identity.Models
 {
-    public class AppUserLogin : IdentityUserLogin<string>
+    public class AppUserLogin : IdentityUserLogin<int>
     {
     }
 }

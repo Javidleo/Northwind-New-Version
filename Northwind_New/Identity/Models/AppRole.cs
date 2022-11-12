@@ -1,31 +1,33 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
 
 
 namespace Identity.Models
 {
-    public class AppRole : IdentityRole
+    public class AppRole : IdentityRole<int>
     {
+        public string Description { get; set; }
+        public bool IsActive { get; set; } = true;
+
         public AppRole()
         {
         }
 
-        public AppRole(string name)
-            : this()
+        private AppRole(string name, string description)
         {
             Name = name;
+            Description = string.IsNullOrWhiteSpace(description) ? "no description" : description;
         }
 
-        public AppRole(string name, string description)
-            : this(name)
+        public static AppRole Create(string name, string description)
+        => new(name, description);
+
+        public void ChangeProperties(string name, string description)
         {
-            Description = description;
+            Name = name;
+            Description = string.IsNullOrWhiteSpace(description) ? Description : description;
         }
 
-        public string Description { get; set; }
-        public bool IsActive { get; set; } = true;
+        public void Deactivate() => IsActive = false;
 
-
-        public virtual ICollection<AppUserRole> Users { get; set; }
     }
 }

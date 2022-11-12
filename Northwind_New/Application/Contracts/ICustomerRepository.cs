@@ -1,10 +1,10 @@
-﻿using DomainModel.Entities;
+﻿using Application.Common.Interfaces;
+using DomainModel.Entities;
 
 namespace Application.Contracts
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository : IBaseRepository<Customer>
     {
         bool DoesPhoneNumberExist(string phone);
-        void Add(Customer customer);
     }
 }
