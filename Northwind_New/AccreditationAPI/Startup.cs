@@ -111,7 +111,6 @@ namespace API
             }
 
             context.Database.EnsureCreated();
-            // app.ConfigureExceptionHandler();
             app.UseMiddleware<ExceptionMiddleware>();
 
 

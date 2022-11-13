@@ -27,8 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CommandBuilder\" />
-    <Folder Include="Test\" />
+    <Folder Include="Test\Test\" />
   </ItemGroup>
 
 </Project>

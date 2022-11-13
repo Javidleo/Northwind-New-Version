@@ -8,6 +8,7 @@ using DomainModel.Document;
 using DomainModel.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -44,6 +45,7 @@ namespace DataSource
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ReadAndWriteDbContext).Assembly);
             // new Models
         }
+
         // this SaveChanges Method working asynchronsly and get userId from User Calims;
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
@@ -53,12 +55,12 @@ namespace DataSource
                 {
                     case EntityState.Added: // if entity state is added take userId from claim and use it as createBy
                         entry.Entity.CreatedBy = _currentUserService.UserId;
-                        entry.Entity.Created = Calender.CurrentDateWithTime;
+                        entry.Entity.Created = DateTime.Now;
                         break;
 
                     case EntityState.Modified: // if entity state is modified take userId from claim and use it as modifiedby
                         entry.Entity.LastModifiedBy = _currentUserService.UserId;
-                        entry.Entity.LastModified = Calender.CurrentDateWithTime;
+                        entry.Entity.LastModified = DateTime.Now;
                         break;
                 }
             }

@@ -34,14 +34,20 @@ namespace DataAccess
             _dbSet.Remove(entity);
         }
 
-        public virtual async Task<bool> DoesExist(Expression<Func<TEntity, bool>> filter)
+        public virtual bool DoesExist(Expression<Func<TEntity, bool>> filter)
+        => _dbSet.Any(filter);
+
+        public virtual async Task<bool> DoesExistAsync(Expression<Func<TEntity, bool>> filter)
         => await _dbSet.AnyAsync(filter);
 
         public virtual async Task<List<TEntity>> FindAllAsync()
         => await _dbSet.AsNoTracking().ToListAsync();
 
         public virtual async Task<TEntity> FindAsync(int Id)
-        => await _dbSet.FindAsync(Id) ?? throw new ArgumentNullException();
+        => await _dbSet.FindAsync(Id);
+
+        public virtual async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> filter)
+        => await _dbSet.FirstOrDefaultAsync(filter);
 
         public virtual async Task<List<TEntity>> Search(Expression<Func<TEntity, bool>> filter)
         => await _dbSet.Where(filter).AsNoTracking().ToListAsync();

@@ -1,7 +1,10 @@
-﻿namespace DataSource
+﻿using System.Threading;
+using System.Threading.Tasks;
+
+namespace DataSource
 {
     public interface IUnitOfWork
     {
-        int SaveChanges();
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

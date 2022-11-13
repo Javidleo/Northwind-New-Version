@@ -15,6 +15,7 @@ namespace Application.Common.Interfaces
 
         // Find 
         Task<TEntity> FindAsync(int Id);
+        Task<TEntity> FindAsync(Expression<Func<TEntity,bool>> filter);
         Task<List<TEntity>> FindAllAsync();
 
         // Search Query  take an expression and return a list of expected entity
@@ -22,7 +23,8 @@ namespace Application.Common.Interfaces
 
 
         // Does Exist // check for input query and return true if Exist and false if it is not existed 
-        Task<bool> DoesExist(Expression<Func<TEntity, bool>> filter);
+        bool DoesExist(Expression<Func<TEntity,bool>> filter);
+        Task<bool> DoesExistAsync(Expression<Func<TEntity, bool>> filter);
 
     }
 }

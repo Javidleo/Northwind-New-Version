@@ -13,6 +13,6 @@ namespace API.Filters
         public void OnActionExecuting(ActionExecutingContext context) { }
 
         public void OnActionExecuted(ActionExecutedContext context)
-        => unitOfWork.SaveChanges();
+        => unitOfWork.SaveChangesAsync();
     }
 }
