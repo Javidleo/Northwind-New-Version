@@ -19,6 +19,9 @@ namespace Application.Services.CategoryServices.Commands.Upsert
             if (_categoryRepository.DoesExist(i => i.CategoryName == request.name))
                 throw new ConflictException("duplciate CategoryName");
 
+            if (_categoryRepository.DoesExist(i => i.Id == request.parentId))
+                throw new NotFoundException("parent Category does not Exist");
+
             if (request.id == null) // Create Situation
             {
                 var category = Category.Create(request.name, request.description, request.picture);

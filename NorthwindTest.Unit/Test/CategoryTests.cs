@@ -37,6 +37,17 @@ namespace NorthwindTest.Unit.Test
         }
 
         [Fact]
+        public async void UpsertCategory_CheckForInvalidParentId_ThrowsNotFoundException()
+        {
+            var command = new CategoryCommandBuilder().BuildAsUpsertCommand();
+            _categoryRepository.Setup(i=> i.DoesExist(i=> i.Id == command.parentId)).Returns(true);
+
+            Func<Task> action = async () => await _upsertHandler.Handle(command, CancellationToken.None);
+
+            await Assert.ThrowsAsync<NotFoundException>(action);
+        }
+
+        [Fact]
         public async void UpsertCategory_CreateSituation_CheckForWorkingWell()
         {
             var command = new CategoryCommandBuilder().BuildAsUpsertCommand();
