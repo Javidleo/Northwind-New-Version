@@ -5,16 +5,20 @@ namespace Identity.Models
     public class AppUser : IdentityUser<int>
     {
         public Guid Guid { get; set; }
-
         public string? FirstName { get; set; }
-
         public string? LastName { get; set; }
-
         public bool IsActive { get; set; } = true;
-
         public DateTime? BirthDate { get; set; }
-
         public bool? Gender { get; set; }
+        public string CompanyName { get; private set; }
+        public string ContactName { get; private set; }
+        public string ContactTitle { get; private set; }
+        public string Address { get; private set; }
+        public string City { get; private set; }
+        public string Region { get; private set; }
+        public string PostalCode { get; private set; }
+        public string Country { get; private set; }
+        public string Fax { get; private set; }
 
         #region Normal Create Style
 

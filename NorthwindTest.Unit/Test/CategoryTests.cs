@@ -40,7 +40,7 @@ namespace NorthwindTest.Unit.Test
         public async void UpsertCategory_CheckForInvalidParentId_ThrowsNotFoundException()
         {
             var command = new CategoryCommandBuilder().BuildAsUpsertCommand();
-            _categoryRepository.Setup(i=> i.DoesExist(i=> i.Id == command.parentId)).Returns(true);
+            _categoryRepository.Setup(i => i.DoesExist(i => i.Id == command.parentId)).Returns(true);
 
             Func<Task> action = async () => await _upsertHandler.Handle(command, CancellationToken.None);
 

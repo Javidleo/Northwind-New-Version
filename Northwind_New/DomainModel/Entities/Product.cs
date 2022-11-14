@@ -21,6 +21,7 @@ namespace DomainModel.Entities
 
         public Category Category { get; private set; }
         public Supplier Supplier { get; private set; }
+        public ICollection<ProductAttribute> ProductAttributes { get; set; }
         public ICollection<OrderDetail> OrderDetails { get; private set; }
     }
 }

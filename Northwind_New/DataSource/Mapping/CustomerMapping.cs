@@ -30,7 +30,7 @@ namespace DataSource.Mapping
 
             builder.Property(e => e.Fax).HasMaxLength(24);
 
-            builder.Property(e => e.Phone).HasMaxLength(24);
+            builder.Property(e => e.PhoneNumber).HasMaxLength(24);
 
             builder.Property(e => e.PostalCode).HasMaxLength(10);
 

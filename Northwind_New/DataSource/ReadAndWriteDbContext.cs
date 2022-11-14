@@ -1,7 +1,5 @@
-﻿using Application.Common;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using DataAccess;
-using DataSource.Mapping;
 using DomainModel;
 using DomainModel.Common;
 using DomainModel.Document;
@@ -49,9 +47,9 @@ namespace DataSource
         // this SaveChanges Method working asynchronsly and get userId from User Calims;
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-            foreach(var entry in ChangeTracker.Entries<AuditableEntity>())
+            foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
             {
-                switch (entry.State) 
+                switch (entry.State)
                 {
                     case EntityState.Added: // if entity state is added take userId from claim and use it as createBy
                         entry.Entity.CreatedBy = _currentUserService.UserId;

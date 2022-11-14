@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DomainModel
+﻿namespace DomainModel
 {
     public abstract class AggregateRoot
     {

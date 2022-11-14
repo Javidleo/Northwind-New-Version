@@ -1,8 +1,6 @@
 ﻿using Application.Common.Exceptions;
 using Application.Contracts;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.Services.CategoryServices.Commands.Delete
 {

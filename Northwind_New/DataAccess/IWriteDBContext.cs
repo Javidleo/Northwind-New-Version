@@ -12,7 +12,7 @@ namespace DataAccess
         public void MarkAsModified<Entity>(Entity entity) where Entity : class;
         public void MarkAsDeleted<Entity>(Entity entity) where Entity : class;
 
-        DbSet<Entity> Set<Entity>() where Entity :class ;
+        DbSet<Entity> Set<Entity>() where Entity : class;
         EntityEntry Entry(object entity);
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 
@@ -28,7 +28,7 @@ namespace DataAccess
         public DbSet<OrderDetail> OrderDetail { get; set; }
         public DbSet<Product> Product { get; set; }
         public DbSet<Region> Region { get; set; }
-        public DbSet<Shipper> Shipper   { get; set; }
+        public DbSet<Shipper> Shipper { get; set; }
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<Territory> Territory { get; set; }
         public DbSet<DocumentView> DocumentView { get; set; }

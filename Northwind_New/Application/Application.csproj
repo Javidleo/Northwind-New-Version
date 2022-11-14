@@ -25,4 +25,8 @@
     <ProjectReference Include="..\DomainModel\DomainModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\CustomerService\Commands\" />
+  </ItemGroup>
+
 </Project>

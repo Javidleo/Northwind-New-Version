@@ -2,8 +2,6 @@
 using Application.Contracts;
 using DomainModel.Entities;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.Services.CategoryServices.Commands.Upsert
 {
@@ -19,8 +17,9 @@ namespace Application.Services.CategoryServices.Commands.Upsert
             if (_categoryRepository.DoesExist(i => i.CategoryName == request.name))
                 throw new ConflictException("duplciate CategoryName");
 
-            if (_categoryRepository.DoesExist(i => i.Id == request.parentId))
-                throw new NotFoundException("parent Category does not Exist");
+            if (request.parentId is not null)
+                if (_categoryRepository.DoesExist(i => i.Id == request.parentId))
+                    throw new NotFoundException("parent Category does not Exist");
 
             if (request.id == null) // Create Situation
             {

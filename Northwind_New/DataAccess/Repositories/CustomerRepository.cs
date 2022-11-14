@@ -10,6 +10,6 @@ namespace DataAccess.Repositories
         }
 
         public bool DoesPhoneNumberExist(string phone)
-        => _context.Customer.Any(i => i.Phone == phone);
+        => _context.Customer.Any(i => i.PhoneNumber == phone);
     }
 }
